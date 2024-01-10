@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        var diemVatLy = parseFloat(prompt("Nhập điểm Vật lý:"));
+        var diemHoaHoc = parseFloat(prompt("Nhập điểm Hóa học:"));
+        var diemSinhHoc = parseFloat(prompt("Nhập điểm Sinh học:"));
+        var tongdiem = diemVatLy + diemHoaHoc + diemSinhHoc;
+        var diemtrungbinh = tongdiem/3
+    </script> -->
+</head>
+<body>
+    <h1>Nhập điểm của sinh viên</h1>
+
+  <label for="diem-vat-ly">Điểm Vật lý:</label>
+  <input type="number" id="diem-vat-ly">
+
+  <label for="diem-hoa-hoc">Điểm Hóa học:</label>
+  <input type="number" id="diem-hoa-hoc">
+
+  <label for="diem-sinh-hoc">Điểm Sinh học:</label>
+  <input type="number" id="diem-sinh-hoc">
+
+  <button onclick="tinhDiem()">Tính</button>
+  <h2>Kết quả:</h2>
+  <p id="ket-qua"></p>
+
+  <script>
+    function tinhDiem() {
+      var diemVatLy = parseFloat(document.getElementById("diem-vat-ly").value);
+      var diemHoaHoc = parseFloat(document.getElementById("diem-hoa-hoc").value);
+      var diemSinhHoc = parseFloat(document.getElementById("diem-sinh-hoc").value);
+
+      var tongDiem = diemVatLy + diemHoaHoc + diemSinhHoc;
+      var diemTrungBinh = tongDiem / 3;
+
+      var ketQua = "Tổng điểm: " + tongDiem + "<br>Điểm trung bình: " + diemTrungBinh;
+      document.getElementById("ket-qua").innerHTML = ketQua;
+    }
+  </script> 
+</body>
+</html>
